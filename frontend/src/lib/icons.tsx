@@ -1,0 +1,67 @@
+/* eslint-disable react-refresh/only-export-components */
+import {
+  BarChart3,
+  BookOpen,
+  Bell,
+  Box,
+  Building2,
+  Calendar,
+  CircleHelp,
+  ClipboardCheck,
+  ClipboardList,
+  FileText,
+  Folder,
+  GraduationCap,
+  House,
+  KeyRound,
+  Layers,
+  Link as LinkIcon,
+  ListTree,
+  Lock,
+  Menu,
+  Puzzle,
+  School,
+  Settings,
+  ShieldCheck,
+  User,
+  UserCog,
+  Users,
+  Wallet,
+  type LucideIcon,
+} from "lucide-react";
+
+/** Names the backend may send (core/icons.py) → lucide icon. */
+export const ICONS: Record<string, LucideIcon> = {
+  home: House,
+  users: Users,
+  user: User,
+  "user-cog": UserCog,
+  "shield-check": ShieldCheck,
+  "key-round": KeyRound,
+  layers: Layers,
+  puzzle: Puzzle,
+  settings: Settings,
+  "list-tree": ListTree,
+  menu: Menu,
+  folder: Folder,
+  "book-open": BookOpen,
+  "graduation-cap": GraduationCap,
+  "clipboard-list": ClipboardList,
+  "clipboard-check": ClipboardCheck,
+  calendar: Calendar,
+  "file-text": FileText,
+  wallet: Wallet,
+  bell: Bell,
+  building: Building2,
+  "chart-bar": BarChart3,
+  "circle-help": CircleHelp,
+  link: LinkIcon,
+  box: Box,
+  lock: Lock,
+  school: School,
+};
+
+export function NamedIcon({ name, className }: { name?: string; className?: string }) {
+  const Icon = (name && ICONS[name]) || Box;
+  return <Icon className={className} strokeWidth={1.75} aria-hidden="true" />;
+}

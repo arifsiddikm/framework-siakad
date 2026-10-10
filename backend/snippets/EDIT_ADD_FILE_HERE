@@ -1,0 +1,22 @@
+==========================================================================
+ backend/snippets/  —  SISI SERVER (PYTHON) DARI SNIPPET  (OPSIONAL)
+==========================================================================
+Taruh file .py di sini HANYA kalau snippet React Anda butuh data dari server.
+Nama file harus SAMA dengan file React-nya:
+
+    frontend/src/snippets/pages/data_ijazah.tsx   <->   backend/snippets/pages/data_ijazah.py
+    (nama snippet: pages.data_ijazah)
+
+Isi minimal file .py:
+
+    PERMISSION = "mahasiswa.view"   # izin yang dibutuhkan (None = semua yang sudah login)
+
+    def data(*, user, params):      # params = isian dari admin (anggap TIDAK tepercaya)
+        return {"jumlah": 10}       # JSON apa saja; muncul sebagai props.data di React
+
+Aturan: ORM saja (tanpa SQL mentah), validasi params, jangan bocorkan data sensitif.
+Tidak perlu mendaftar di manifest apa pun: cukup nama file yang sama.
+Buat kerangkanya otomatis: panel admin > Snippet > Snippet baru (centang "Butuh data dari server"),
+atau:  python manage.py startsnippet pages.nama_baru --with-data
+Snippet yang dihapus dari panel: file ini diganti nama jadi nama_deleted.py (bisa dipulihkan).
+Tutorial singkat: TUTORIAL-SNIPPETS.md (folder utama proyek).

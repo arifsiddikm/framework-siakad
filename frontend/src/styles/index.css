@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+@layer base {
+  html, body, #root { min-height: 100%; }
+  button, [role="button"], a { -webkit-tap-highlight-color: transparent; }
+}
+
+/* SweetAlert2 skinned with SiakadKu tokens (see docs/PANDUAN-STYLE.md §Peringatan). */
+.sk-swal { font-family: var(--font-sans); border-radius: 12px; padding: 1.5rem 1.25rem 1.25rem; }
+.sk-swal .swal2-title { font-size: 18px; font-weight: 600; color: var(--color-navy-900); padding: 0.5rem 0 0; }
+.sk-swal .swal2-html-container { font-size: 14px; line-height: 1.5; color: var(--color-slate-600); margin: 0.5rem 0 0; }
+.sk-swal .swal2-actions { margin-top: 1.25rem; gap: 8px; }
+.sk-btn { min-height: 40px; padding: 0 16px; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; }
+.sk-btn:focus-visible { outline: 2px solid var(--color-navy-500); outline-offset: 2px; }
+.sk-btn-primary { background: var(--color-navy-700); color: #fff; }
+.sk-btn-primary:hover { background: var(--color-navy-800); }
+.sk-btn-danger { background: var(--color-red-600); color: #fff; }
+.sk-btn-danger:hover { background: var(--color-red-700); }
+.sk-btn-secondary { background: #fff; color: var(--color-slate-800); border: 1px solid var(--color-slate-300); }
+.sk-btn-secondary:hover { background: var(--color-slate-50); }
+.sk-toast.swal2-toast { font-family: var(--font-sans); border: 1px solid var(--color-line); border-radius: 10px; box-shadow: 0 8px 24px rgba(11, 31, 75, 0.14); }
+.sk-toast .swal2-title { font-size: 14px; font-weight: 500; color: var(--color-slate-900); }
+.sk-secret { display: block; margin-top: 12px; padding: 10px 12px; border: 1px solid var(--color-line); border-radius: 8px; background: var(--color-slate-50); font-family: var(--font-mono); font-size: 15px; color: var(--color-slate-900); word-break: break-all; user-select: all; }

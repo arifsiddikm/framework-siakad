@@ -1,0 +1,32 @@
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+extend-exclude = [".venv", "migrations"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S", "DJ"]
+ignore = ["S101"]  # assert is fine in tests
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S105", "S106", "S311", "E501"]
+"core/management/commands/start*.py" = ["E501"]
+"snippets/**" = ["E501"]
+"core/sample_content.py" = ["E501"]  # prose and sample text
+"modules/*/manifest.py" = ["E501"]  # descriptions are prose
+"modules/*/management/commands/seed_*.py" = ["E501"]  # sample data rows
+"core/services/snippet_admin.py" = ["E501"]  # templates and long user-facing messages  # long generated-template and help strings
+
+[tool.mypy]
+python_version = "3.12"
+plugins = ["mypy_django_plugin.main", "mypy_drf_plugin.main"]
+ignore_missing_imports = true
+exclude = ["migrations/", ".venv/"]
+
+[tool.django-stubs]
+django_settings_module = "config.settings"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+python_files = ["test_*.py"]
+testpaths = ["tests"]
+addopts = "-q"

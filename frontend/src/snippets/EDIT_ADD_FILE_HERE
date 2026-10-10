@@ -1,0 +1,29 @@
+==========================================================================
+ frontend/src/snippets/  —  TARUH / EDIT FILE SNIPPET REACT DI SINI
+==========================================================================
+Satu file .tsx = satu snippet. Nama file (dengan folder) = nama snippet.
+Folder boleh bertingkat dan bebas namanya:
+
+    pages/data_ijazah.tsx                    ->  pages.data_ijazah
+    pages/data_ijazah/upload_form.tsx        ->  pages.data_ijazah.upload_form
+    laporan/ujian.tsx                        ->  laporan.ujian
+
+CARA PAKAI DI HALAMAN (panel admin > Halaman & akses):
+  1) Di blok Teks, tulis pada baris sendiri:   [snippet:pages.data_ijazah]
+     dengan isian:                             [snippet:pages.data_ijazah limit=5 status="Siap diambil"]
+  2) atau tambah blok "Snippet" lalu pilih dari daftar (isiannya berupa formulir).
+
+CARA MEMBUAT:
+  * Dari panel admin: menu Snippet > Snippet baru (file kerangka dibuat otomatis di sini), lalu edit isinya di IDE; ATAU
+  * Salin _TEMPLATE.tsx (file berawalan "_" tidak dibaca), ganti namanya, edit; ATAU
+  * python manage.py startsnippet pages.nama_baru            (hanya tampilan)
+    python manage.py startsnippet pages.nama_baru --with-data (+ file Python)
+
+DATA DARI SERVER (opsional): buat file dengan path SAMA di backend/snippets/
+  frontend/src/snippets/pages/data_ijazah.tsx  <->  backend/snippets/pages/data_ijazah.py
+  Tidak perlu mendaftar di mana pun. Backend hanya satu endpoint: /api/snippets/<nama>/data/
+
+HAPUS: dari panel admin (Snippet > tong sampah). File tidak hilang: diganti nama jadi nama_deleted.tsx dan bisa dipulihkan.
+
+Aturan: tampilan ikut docs/PANDUAN-STYLE.md; komponen dari "@/components/ui/*".
+Tutorial singkat: TUTORIAL-SNIPPETS.md (folder utama proyek).

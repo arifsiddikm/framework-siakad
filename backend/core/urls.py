@@ -1,0 +1,35 @@
+from django.urls import path
+
+from core.views import admin, auth, pages
+
+urlpatterns = [
+    path("auth/csrf/", auth.CsrfView.as_view()),
+    path("auth/login/", auth.LoginView.as_view()),
+    path("auth/logout/", auth.LogoutView.as_view()),
+    path("auth/me/", auth.MeView.as_view()),
+    path("auth/password/", auth.PasswordChangeView.as_view()),
+    path("admin/permissions/", admin.PermissionListView.as_view()),
+    path("admin/roles/", admin.RoleListView.as_view()),
+    path("admin/roles/<int:pk>/", admin.RoleDetailView.as_view()),
+    path("admin/users/options/", admin.UserOptionsView.as_view()),
+    path("admin/users/", admin.UserListView.as_view()),
+    path("admin/users/<int:pk>/", admin.UserDetailView.as_view()),
+    path("admin/users/<int:pk>/reset-password/", admin.UserResetPasswordView.as_view()),
+    path("admin/modules/", admin.ModuleListView.as_view()),
+    path("admin/modules/<str:code>/", admin.ModuleDetailView.as_view()),
+    path("admin/access-map/", admin.AccessMapView.as_view()),
+    path("admin/pages/", admin.PageListView.as_view()),
+    path("admin/pages/<int:pk>/", admin.PageDetailAdminView.as_view()),
+    path("pages/<slug:slug>/", pages.PageDetailView.as_view()),
+    path("snippets/<str:name>/data/", pages.SnippetDataView.as_view()),
+    path("pages/<slug:slug>/blocks/<str:block_id>/", pages.PageBlockDataView.as_view()),
+    path("admin/snippets/", admin.SnippetListView.as_view()),
+    path("admin/snippets/<int:pk>/", admin.SnippetDetailView.as_view()),
+    path("admin/snippets/<int:pk>/restore/", admin.SnippetRestoreView.as_view()),
+    path("admin/datasets/", admin.DatasetListView.as_view()),
+    path("admin/blocks/preview/", admin.BlockPreviewView.as_view()),
+    path("admin/menu/options/", admin.MenuOptionsView.as_view()),
+    path("admin/menu/", admin.MenuListView.as_view()),
+    path("admin/menu/<int:pk>/", admin.MenuDetailView.as_view()),
+    path("admin/menu/<int:pk>/move/", admin.MenuMoveView.as_view()),
+]

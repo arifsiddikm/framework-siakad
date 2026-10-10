@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Ilustrasi gedung kampus">
+  <rect width="800" height="900" fill="#CCDBF4"/>
+  <rect y="560" width="800" height="120" fill="#A5BFE9"/>
+  <g fill="#E6EEFB"><ellipse cx="170" cy="120" rx="90" ry="26"/><ellipse cx="230" cy="105" rx="60" ry="22"/><ellipse cx="620" cy="190" rx="100" ry="28"/><ellipse cx="680" cy="172" rx="56" ry="20"/></g>
+  <!-- far trees -->
+  <g fill="#6E9C7E"><circle cx="40" cy="520" r="70"/><circle cx="110" cy="540" r="60"/><circle cx="770" cy="520" r="72"/><circle cx="700" cy="545" r="58"/></g>
+  <!-- main building -->
+  <rect x="90" y="360" width="620" height="300" fill="#F5F7FA"/>
+  <rect x="80" y="338" width="640" height="26" fill="#0F2C5E"/>
+  <!-- window rows -->
+  <g fill="#6F96D8" stroke="#153A7A" stroke-width="3">
+    <g id="row"><rect x="112" y="388" width="46" height="52"/><rect x="176" y="388" width="46" height="52"/><rect x="240" y="388" width="46" height="52"/><rect x="514" y="388" width="46" height="52"/><rect x="578" y="388" width="46" height="52"/><rect x="642" y="388" width="46" height="52"/></g>
+    <use href="#row" y="88"/>
+    <use href="#row" y="176"/>
+  </g>
+  <!-- balcony rails -->
+  <g stroke="#153A7A" stroke-width="3"><line x1="90" y1="452" x2="710" y2="452"/><line x1="90" y1="540" x2="710" y2="540"/></g>
+  <rect x="90" y="650" width="620" height="14" fill="#BCC5D1"/>
+  <!-- central block -->
+  <rect x="320" y="290" width="160" height="372" fill="#EAEEF3"/>
+  <polygon points="300,292 400,236 500,292" fill="#0B1F4B"/>
+  <rect x="300" y="290" width="200" height="14" fill="#0F2C5E"/>
+  <circle cx="400" cy="270" r="14" fill="#F5A524"/>
+  <g fill="#6F96D8" stroke="#153A7A" stroke-width="3"><rect x="340" y="326" width="120" height="64"/><rect x="340" y="414" width="120" height="64"/></g>
+  <g stroke="#153A7A" stroke-width="3"><line x1="400" y1="326" x2="400" y2="390"/><line x1="400" y1="414" x2="400" y2="478"/></g>
+  <rect x="368" y="540" width="64" height="112" fill="#153A7A"/>
+  <line x1="400" y1="540" x2="400" y2="652" stroke="#CCDBF4" stroke-width="3"/>
+  <rect x="330" y="652" width="140" height="10" fill="#8C98A9"/>
+  <rect x="316" y="662" width="168" height="10" fill="#BCC5D1"/>
+  <!-- flagpole -->
+  <line x1="598" y1="330" x2="598" y2="680" stroke="#647085" stroke-width="4"/>
+  <rect x="600" y="334" width="46" height="14" fill="#B91C1C"/><rect x="600" y="348" width="46" height="14" fill="#F5F7FA"/>
+  <!-- ground -->
+  <rect y="672" width="800" height="228" fill="#BCC5D1"/>
+  <rect y="664" width="800" height="14" fill="#6E9C7E"/>
+  <g fill="#F5F7FA"><rect x="60" y="780" width="120" height="8"/><rect x="260" y="780" width="120" height="8"/><rect x="460" y="780" width="120" height="8"/><rect x="660" y="780" width="120" height="8"/></g>
+  <!-- near trees -->
+  <g><rect x="52" y="560" width="14" height="116" fill="#647085"/><circle cx="58" cy="540" r="62" fill="#3E7554"/><circle cx="104" cy="580" r="44" fill="#4B8662"/>
+     <rect x="738" y="560" width="14" height="116" fill="#647085"/><circle cx="745" cy="540" r="62" fill="#3E7554"/><circle cx="700" cy="582" r="44" fill="#4B8662"/></g>
+</svg>

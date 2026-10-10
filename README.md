@@ -1,7 +1,25 @@
 # framework-siakad
 
-Framework core SIAKAD modular (sample) — login, RBAC, registri modul, menu dinamis, admin panel.
-Terpasang di `dev-siakadku.riplabs.co.id`. Versi 0.1 · 9 Okt 2026. Semua data fiktif.
+Selamat datang. Ini **framework core SIAKAD modular**: login, RBAC (peran dan izin), registri modul, menu dinamis, Panel Admin, page builder dan snippet. Aplikasi lain (mis. `siakadku-demo`) dibangun di atasnya dengan menambah modul. Semua data fiktif.
+
+Terpasang di https://dev-siakadku.riplabs.co.id · Stack: Python 3.12, Django 5.2, DRF, MySQL 8.4, React, Vite, TypeScript, Tailwind v4.
+
+## Instalasi singkat
+
+```bash
+mysql -uroot -P3307 -e "CREATE DATABASE siakadku_framework CHARACTER SET utf8mb4;"
+cd backend && python3.12 -m venv .venv && .venv/bin/pip install -r requirements-dev.txt
+cp .env.example .env && .venv/bin/python manage.py migrate && .venv/bin/python manage.py seed_roles
+cd ../frontend && npm install && cp .env.example .env.local
+cd .. && pm2 start ecosystem.config.cjs      # backend :8000, frontend :5173
+```
+Rinciannya ada di bagian *Menjalankan secara lokal* di bawah. Nilai di `.env` (DB, `SEED_ADMIN_PASSWORD`, dst.) diisi sendiri; tidak ada kata sandi bawaan di kode.
+
+## Kerja tim
+
+* `main` = yang sudah ditinjau; kerja di branch sendiri (mis. `arif`) lalu Pull Request.
+* Jangan commit `.env`, `.env.local`, `uploads/`, atau kunci. Hanya `.env.example`.
+* Jalankan `scripts/check.sh` sebelum membuka PR. Modul baru: `docs/PANDUAN-MODUL.md`.
 
 ## Mulai
 1. Baca `docs/PRD-FRAMEWORK.md` lalu `CLAUDE.md`.
